@@ -1,0 +1,29 @@
+.setting-section {
+     ::ng-deep .ant-tabs>.ant-tabs-nav {
+        width: 15%;
+    }
+     ::ng-deep .ant-tabs-content-holder {
+        width: 85%;
+    }
+     ::ng-deep .ant-tabs-left>.ant-tabs-nav .ant-tabs-tab {
+        padding: 24px 24px;
+        margin: 0;
+    }
+     ::ng-deep .ant-tabs-tab-btn {
+        font-size: 18px;
+        font-family: 'GoogleSans-Medium';
+        color: var(--heading-color);
+    }
+     ::ng-deep .ant-tabs-left>.ant-tabs-nav .ant-tabs-tab-active .ant-tabs-tab-btn,
+     ::ng-deep .ant-tabs-tab:hover {
+        font-size: 20px;
+        text-shadow: none;
+        color: var(--primary-color);
+    }
+     ::ng-deep .ant-tabs-ink-bar {
+        background: var(--primary-color);
+    }
+    .card-padding {
+        height: calc(100vh - 140px);
+    }
+}

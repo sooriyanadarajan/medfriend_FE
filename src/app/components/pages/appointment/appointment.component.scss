@@ -1,0 +1,14 @@
+.appointment-section {
+     ::ng-deep .ant-tabs-tab {
+        font-size: 18px;
+        font-family: 'GoogleSans-Medium';
+        color: var(--text-color);
+    }
+     ::ng-deep .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+        color: var(--primary-color);
+        font-size: 22px;
+    }
+     ::ng-deep .ant-tabs-ink-bar {
+        background: var(--primary-color);
+    }
+}

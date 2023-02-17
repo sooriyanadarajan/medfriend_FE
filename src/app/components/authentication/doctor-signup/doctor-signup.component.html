@@ -1,0 +1,70 @@
+<div class="header-section">
+    <div class="header-inner-menu container">
+        <div class="header-inner-body">
+            <ul nz-menu nzMode="horizontal">
+                <li nz-menu-item routerLink='/auth/login' routerLinkActive="active">
+                    Login
+                </li>
+                <li routerLink="/auth/signup" nzSelected routerLinkActive="active" nz-menu-item>
+                    Signup
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="auth-section">
+    <div class="auth-form">
+        <div class="auth-title center mb-1">Sign Up</div>
+        <p class="center mb-2">Are you a patient? <a routerLink="/auth/signup" class="highlight">Signup Here</a></p>
+        <form [formGroup]="SignUp" (ngSubmit)="Sign()">
+            <nz-form-item>
+                <nz-form-label nzFor="userName">UserName</nz-form-label>
+                <nz-form-control>
+                    <nz-form-control nzErrorTip="Please input your username!">
+                    <input nz-input formControlName="name" placeholder="userName is Required" type="name" />
+                </nz-form-control>
+                </nz-form-control>
+             
+            </nz-form-item>        
+            <nz-form-item>
+                <nz-form-label nzFor="email">Email Id</nz-form-label>
+                <nz-form-control>
+                    <nz-form-control  nzErrorTip="The input is not valid E-mail!">
+                    <input nz-input formControlName="email" placeholder="email is Required" type="email" />
+                </nz-form-control>
+            </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label nzFor="mobileNumber">Mobile Number</nz-form-label>
+                <nz-form-control>
+                    <nz-form-control [nzValidateStatus]="SignUp.controls['mobileNumber']" nzErrorTip="Please input your phone number!">
+                    <nz-input-group [nzAddOnBefore]="addOnBeforeTemplate">
+                        <input nz-input formControlName="mobileNumber" placeholder="mobileNumber is Required" type="mobileNumber" />
+                    </nz-input-group>
+                    <ng-template #addOnBeforeTemplate>
+                        <nz-select [ngModel]="'+91'" [ngModelOptions]="{standalone: true}">
+                            <nz-option nzLabel="+91" nzValue="+91"></nz-option>
+                            <nz-option nzLabel="+121" nzValue="+121"></nz-option>
+                        </nz-select>
+                    </ng-template>
+                </nz-form-control>
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label nzFor="password">Password</nz-form-label>
+                <nz-form-control>
+                    <nz-form-control  nzErrorTip="Please input your password!">
+                    <input nz-input formControlName="password" placeholder="password is Required" type="password" />
+                </nz-form-control>
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-control nzErrorTip="Please input your Confirm password!">
+                <nz-form-label nzFor="confirmPassword">Confirm Password</nz-form-label> 
+                    <input nz-input formControlName="confirmPassword" placeholder="Confirmpassword is Required" type="password" />
+                </nz-form-control>
+              </nz-form-item>
+            <button class="btn mt-2" nz-button [disabled]="SignUp.invalid"> Sign Up</button>
+        </form>
+    </div>
+</div>

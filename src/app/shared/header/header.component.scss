@@ -1,0 +1,80 @@
+@import "../../../assets/scss/mixin.scss";
+.header-section {
+    font-family: 'GoogleSans-Regular';
+    min-height: 80px;
+    box-shadow: 0 2px 5px var(--box-shadow);
+    background-color: var(--white);
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    .header-inner-menu {
+        .header-inner-body {
+            min-height: 80px;
+            @include flex-shared;
+            .logo {
+                font-size: 24px;
+                font-family: 'GoogleSans-Bold';
+                color: var(--primary-color);
+            }
+            .left-header {
+                padding: 0 24px;
+                img {
+                    width: 24px;
+                }
+                ul {
+                    li {
+                        padding: 0 15px;
+                    }
+                    i {
+                        font-size: 25px;
+                        color: var(--icon-color);
+                    }
+                    .profile {
+                        cursor: pointer;
+                        img {
+                            width: 38px;
+                            border-radius: 50px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+     ::ng-deep .ant-menu {
+        font-size: 18px;
+        color: var(--font-color);
+    }
+     ::ng-deep .ant-menu-item:active,
+     ::ng-deep .ant-menu-item:hover,
+     ::ng-deep .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-selected {
+        color: var(--primary-color);
+        border-bottom: 3px solid var(--primary-color);
+        font-family: 'GoogleSans-Medium';
+        outline: 0;
+    }
+     ::ng-deep .ant-menu-horizontal {
+        border-bottom: 0;
+        line-height: 78px;
+    }
+     ::ng-deep .ant-drawer-header {
+        display: none;
+    }
+}
+
+::ng-deep .ant-dropdown-menu {
+    // width: 150px;
+    top: 14px;
+}
+
+::ng-deep .ant-dropdown-menu-item {
+    padding: 10px 20px;
+    color: var(--font-color);
+    font-family: 'GoogleSans-Regular';
+    font-size: 16px;
+}
+
+::ng-deep .ant-dropdown-menu-item:hover {
+    color: var(--primary-color);
+    // font-family: 'GoogleSans-Medium';
+}

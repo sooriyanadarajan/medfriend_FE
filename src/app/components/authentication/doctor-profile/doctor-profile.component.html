@@ -1,0 +1,324 @@
+<div class="auth-doc-profile-section pt-0">
+
+    <div class="auth-doc-profile">
+        <div class="steps-content">
+            <div *ngIf="current == 0">
+                <div class="auth-doc-profile-title center mt-3 mb-3">
+                    Doctor Profile
+                </div>
+            </div>
+            <div *ngIf="current == 1">
+                <div class="auth-doc-profile-title center mt-3 mb-3">
+                    Medical Registration
+                </div>
+            </div>
+            <div *ngIf="current == 2">
+                <div class="auth-doc-profile-title center mt-3 mb-3">
+                    Education Registration
+                </div>
+            </div>
+            <div *ngIf="current == 3">
+                <div class="auth-doc-profile-title center mt-3 mb-3">
+                    Connect a Practice
+                </div>
+            </div>
+        </div>
+
+        <nz-steps [nzCurrent]="current">
+            <nz-step></nz-step>
+            <nz-step></nz-step>
+            <nz-step></nz-step>
+            <nz-step></nz-step>
+        </nz-steps>
+
+        <nz-steps class="display-none" [nzCurrent]="current">
+            <nz-step></nz-step>
+            <nz-step></nz-step>
+            <nz-step></nz-step>
+            <nz-step></nz-step>
+        </nz-steps>
+
+        <nz-steps class="display-none" [nzCurrent]="current">
+            <nz-step></nz-step>
+            <nz-step></nz-step>
+            <nz-step></nz-step>
+            <nz-step></nz-step>
+        </nz-steps>
+
+        <nz-steps class="display-none" [nzCurrent]="current">
+            <nz-step></nz-step>
+            <nz-step></nz-step>
+            <nz-step></nz-step>
+            <nz-step></nz-step>
+        </nz-steps>
+
+        <div class="steps-content">
+            <div *ngIf="current == 0">
+                <form [formGroup]="signinProfile" (ngSubmit)="Sign()">
+                    <div nz-row>
+                        <div nz-col nzSm="24" nzLg="12" class="pr-2">
+                            <nz-form-item>
+                                <nz-form-label nzFor="name">Name</nz-form-label>
+                                <nz-form-control>
+                                    <nz-form-control nzErrorTip="Please input your username!">
+                                        <input nz-input formControlName="name" placeholder="UserName is Required" type="name" />
+                                    </nz-form-control>
+                                </nz-form-control>
+                            </nz-form-item>
+                        </div>
+                        <div nz-col nzSm="24" nzLg="12" class="pl-2">
+                            <nz-form-item>
+                                <nz-form-label nzFor="name">Gender</nz-form-label>
+                                <nz-form-control>
+                                    <nz-select ngModel="selectedValue" nzPlaceHolder="Select Gender" id="gender" formControlName="gender">
+                                        <nz-option nzValue="Female" nzLabel="Female"></nz-option>
+                                        <nz-option nzValue="Male" nzLabel="Male"></nz-option>
+                                        <nz-option nzValue="Other" nzLabel="Other"></nz-option>
+                                    </nz-select>
+                                </nz-form-control>
+                            </nz-form-item>
+                        </div>
+                        <div nz-col nzSm="24" nzLg="12" class="pr-2">
+                            <nz-form-item>
+                                <nz-form-label nzFor="name">City</nz-form-label>
+                                <nz-form-control>
+                                    <nz-select ngModel="selectedValue" nzPlaceHolder="Select City" id="place" formControlName="place">
+                                        <nz-option nzValue="Pondicherry" nzLabel="Pondicherry"></nz-option>
+                                        <nz-option nzValue="Chennai" nzLabel="Chennai"></nz-option>
+                                        <nz-option nzValue="Delhi" nzLabel="Delhi"></nz-option>
+                                    </nz-select>
+                                </nz-form-control>
+                            </nz-form-item>
+                        </div>
+                        <!-- <div nz-col nzSm="24" nzLg="12" class="pl-2">
+                            <nz-form-item>
+                                <nz-form-label nzFor="name">Profile Photo</nz-form-label>
+                                <nz-form-control>
+                                    <nz-upload nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76" [nzTransformFile]="transformFile">
+                                        <button nz-button><i nz-icon nzType="upload"></i> Click to Upload</button>
+                                    </nz-upload>
+                                </nz-form-control>
+                            </nz-form-item>
+                        </div> -->
+                    </div>
+                    <div class="center-btn mt-3">
+                        <button nz-button class="btn" nzType="default" (click)="next()" *ngIf="current < 3">Next</button>
+                    </div>
+
+                </form>
+            </div>
+            <div *ngIf="current == 1">
+                <form [formGroup]="signinProfile" (ngSubmit)="Sign()">
+                    <div nz-row>
+                        <div nz-col nzSm="24" nzLg="12" class="pr-2">
+                            <nz-form-item>
+                                <nz-form-label nzFor="name">Registration Number</nz-form-label>
+                                <nz-form-control>
+                                    <nz-form-control nzErrorTip="Please input your Registration Number!">
+                                        <input nz-input formControlName="registrationNumber" placeholder="Registration Number is Required" type="Number" />
+                                    </nz-form-control>
+                                </nz-form-control>
+                            </nz-form-item>
+                        </div>
+                        <div nz-col nzSm="24" nzLg="12" class="pl-2">
+                            <nz-form-item>
+                                <nz-form-label nzFor="name">Registration Council</nz-form-label>
+                                <nz-form-control>
+                                    <nz-select ngModel="selectedValue" nzPlaceHolder="Select city" id="registrationCouncil" formControlName="registrationCouncil">
+                                        <nz-option nzValue="General Practitioner" nzLabel="General Practitioner"></nz-option>
+                                        <nz-option nzValue="Neurologist" nzLabel="Neurologist"></nz-option>
+                                        <nz-option nzValue="OB/GYN" nzLabel="OB/GYN"></nz-option>
+                                    </nz-select>
+                                </nz-form-control>
+                            </nz-form-item>
+                        </div>
+                        <div nz-col nzSm="24" nzLg="12" class="pr-2">
+                            <nz-form-item>
+                                <nz-form-label nzFor="name">Registration Year</nz-form-label>
+                                <nz-form-control>
+                                    <nz-select ngModel="selectedValue" nzPlaceHolder="Select year" formControlName="registrationYear">
+                                        <nz-option nzValue="2000" nzLabel="2000"></nz-option>
+                                        <nz-option nzValue="2001" nzLabel="2001"></nz-option>
+                                        <nz-option nzValue="2002" nzLabel="2002"></nz-option>
+                                    </nz-select>
+                                </nz-form-control>
+                            </nz-form-item>
+                        </div>
+                        <!-- <div nz-col nzSm="24" nzLg="12" class="pl-2">
+                            <nz-form-item>
+                                <nz-form-label nzFor="name">Registration Proof</nz-form-label>
+                                <nz-form-control>
+                                    <nz-upload nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76" [nzTransformFile]="transformFile">
+                                        <button nz-button><i nz-icon nzType="upload"></i> Click to Upload</button>
+                                    </nz-upload>
+                                </nz-form-control>
+                            </nz-form-item>
+                        </div> -->
+                    </div>
+                    <div class="center-btn mt-3 display-flex">
+                        <button nz-button class="btn mr-2" nzType="default" (click)="pre()" *ngIf="current < 3">Previous</button>
+                        <button nz-button class="btn" nzType="default" (click)="next()" *ngIf="current < 3">Next</button>
+                    </div>
+                </form>
+            </div>
+            <div *ngIf="current == 2">
+                <form [formGroup]="signinProfile" (ngSubmit)="Sign()">
+                    <div nz-row>
+                        <div nz-col nzSm="24" nzLg="12" class="pr-2">
+                            <nz-form-item>
+                                <nz-form-label nzFor="name">Degree</nz-form-label>
+                                <nz-form-control>
+                                    <nz-select nzShowSearch nzAllowClear ngModel="selectedValue" formControlName="degree" nzPlaceHolder="Select degree">
+                                        <nz-option nzValue="General Practitioner" nzLabel="General Practitioner"></nz-option>
+                                        <nz-option nzValue="Neurologist" nzLabel="Neurologist"></nz-option>
+                                        <nz-option nzValue="OB/GYN" nzLabel="OB/GYN"></nz-option>
+                                    </nz-select>
+                                </nz-form-control>
+                            </nz-form-item>
+                        </div>
+                        <div nz-col nzSm="24" nzLg="12" class="pl-2">
+                            <nz-form-item>
+                                <nz-form-label nzFor="name">College/Institute </nz-form-label>
+                                <nz-form-control>
+                                    <nz-select nzShowSearch nzAllowClear ngModel="selectedValue" nzPlaceHolder="Select college/institute" formControlName="college">
+                                        <nz-option nzValue="General Practitioner" nzLabel="General Practitioner"></nz-option>
+                                        <nz-option nzValue="Neurologist" nzLabel="Neurologist"></nz-option>
+                                        <nz-option nzValue="OB/GYN" nzLabel="OB/GYN"></nz-option>
+                                    </nz-select>
+                                </nz-form-control>
+                            </nz-form-item>
+                        </div>
+
+                        <div nz-col nzSm="24" nzLg="12" class="pr-2">
+                            <nz-form-item>
+                                <nz-form-label nzFor="name">Year of completion</nz-form-label>
+                                <nz-form-control>
+                                    <nz-select ngModel="selectedValue" nzPlaceHolder="Select year of completion" formControlName="degreeCompletion">
+                                        <nz-option nzValue="2000" nzLabel="2000"></nz-option>
+                                        <nz-option nzValue="2001" nzLabel="2001"></nz-option>
+                                        <nz-option nzValue="2002" nzLabel="2002"></nz-option>
+                                    </nz-select>
+                                </nz-form-control>
+                            </nz-form-item>
+                        </div>
+                        <div nz-col nzSm="24" nzLg="12" class="pl-2">
+                            <nz-form-item>
+                                <nz-form-label nzFor="name">Year of Experience</nz-form-label>
+                                <nz-form-control>
+                                    <nz-form-control nzErrorTip="Please input your Experience!">
+                                        <input nz-input name="name" formControlName="experience" placeholder="Year of Experience" type="name" id="experience">
+                                    </nz-form-control>
+                                </nz-form-control>
+                            </nz-form-item>
+                        </div>
+                        <!-- <div nz-col nzSm="24" nzLg="12" class="pr-2">
+                            <nz-form-item>
+                                <nz-form-label nzFor="name">Degree Proof</nz-form-label>
+                                <nz-form-control>
+                                    <nz-upload nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76" [nzTransformFile]="transformFile">
+                                        <button nz-button><i nz-icon nzType="upload"></i> Click to Upload</button>
+                                    </nz-upload>
+                                </nz-form-control>
+                            </nz-form-item>
+                        </div> -->
+                    </div>
+                    <div class="center-btn mt-3 display-flex">
+                        <button nz-button class="btn mr-2" nzType="default" (click)="pre()" *ngIf="current < 3">Previous</button>
+                        <button nz-button class="btn" nzType="default" (click)="next()" *ngIf="current < 3">Next</button>
+                    </div>
+                </form>
+            </div>
+            <div *ngIf="current == 3">
+                <p class="mb-2">Please select any one of the following</p>
+                <nz-radio-group [(ngModel)]="radioValue">
+                    <label nz-radio nzValue="own" (click)="toggleShow()">I own a establishment</label>
+                    <label nz-radio nzValue="vist" (click)="toggleShow()">I vist a establishment</label>
+                </nz-radio-group>
+                <div *ngIf="isShown" class="mt-3">
+                    <form [formGroup]="signinProfile" (ngSubmit)="Sign()">
+                        <div nz-row>
+                            <div nz-col nzSm="24" nzLg="12" class="pr-2">
+                                <nz-form-item>
+                                    <nz-form-label nzFor="name">Establishment Name</nz-form-label>
+                                    <nz-form-control>
+                                        <nz-form-control nzErrorTip="Please input your Establishment Name">
+                                            <input nz-input name="name" formControlName="establishmentName" type="name" placeholder="EstablishmentName is Required " id="establishmentName">
+                                        </nz-form-control>
+                                    </nz-form-control>
+                                </nz-form-item>
+                            </div>
+                            <div nz-col nzSm="24" nzLg="12" class="pl-2">
+                                <nz-form-item>
+                                    <nz-form-label nzFor="name">City</nz-form-label>
+                                    <nz-form-control>
+                                        <nz-select ngModel="selectedValue" nzPlaceHolder="Select City" formControlName="city" id="city">
+                                            <nz-option nzValue="Pondicherry" nzLabel="Pondicherry"></nz-option>
+                                            <nz-option nzValue="Chennai" nzLabel="Chennai"></nz-option>
+                                            <nz-option nzValue="Delhi" nzLabel="Delhi"></nz-option>
+                                        </nz-select>
+                                    </nz-form-control>
+                                </nz-form-item>
+                            </div>
+                            <div nz-col nzSm="24" nzLg="12" class="pr-2">
+                                <nz-form-item>
+                                    <nz-form-label nzFor="name">Locality</nz-form-label>
+                                    <nz-form-control>
+                                        <nz-select ngModel="selectedValue" nzPlaceHolder="Select City" formControlName="locality">
+                                            <nz-option nzValue="Pondicherry" nzLabel="Pondicherry"></nz-option>
+                                            <nz-option nzValue="Chennai" nzLabel="Chennai"></nz-option>
+                                            <nz-option nzValue="Delhi" nzLabel="Delhi"></nz-option>
+                                        </nz-select>
+                                    </nz-form-control>
+                                </nz-form-item>
+                            </div>
+                        </div>
+                        <div class="center-btn display-flex mt-3">
+                            <button nz-button class="btn mr-2" nzType="default" (click)="pre()" *ngIf="current < 4">Previous</button>
+                            <button class="btn" nz-button (click)="showModal()" [disabled]="signinProfile.invalid">Confirm</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nz-modal [(nzVisible)]="isVisible" nzTitle="Upload Documents" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+        <ng-container *nzModalContent>
+            <div class="upload-proof mb-2">
+                <h4 class="mb-1">Medical Registration Proof</h4>
+                <nz-upload nzType="drag" [nzMultiple]="true" nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76">
+                    <i nz-icon nzType="upload"></i> Drag and Upload files here
+                </nz-upload>
+                <div class="dflex-between">
+                    <p>Files supported: png, jpg, PDF</p>
+                    <p>Maximum size: 2MB</p>
+                </div>
+            </div>
+            <div class="upload-proof mb-2">
+                <h4 class="mb-1">Degree Proof</h4>
+                <nz-upload nzType="drag" [nzMultiple]="true" nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76">
+                    <i nz-icon nzType="upload"></i> Drag and Upload files here
+                </nz-upload>
+                <div class="dflex-between">
+                    <p>Files supported: png, jpg, PDF</p>
+                    <p>Maximum size: 2MB</p>
+                </div>
+            </div>
+            <div class="upload-proof mb-2">
+                <h4 class="mb-1">Government: Issued Photo ID Proof</h4>
+                <div class="display-flex upload-two-card">
+                    <nz-upload nzType="drag" [nzMultiple]="true" nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76">
+                        <i nz-icon nzType="upload"></i> Upload Front
+                    </nz-upload>
+                    <nz-upload nzType="drag" [nzMultiple]="true" nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76">
+                        <i nz-icon nzType="upload"></i> Upload Back
+                    </nz-upload>
+                </div>
+            </div>
+            <div class="mt-2 mb-2 dis-block">
+                <div class="display-flex">
+                    <button nz-button class="btn mr-2">Save & Continue</button>
+                    <button nz-button class="btn bg-transparent primary-color">I'll Do This Later</button>
+                </div>
+            </div>
+        </ng-container>
+    </nz-modal>

@@ -1,0 +1,144 @@
+@import "../scss/_breakpoints.scss";
+.header-section {
+    font-family: 'GoogleSans-Regular';
+    min-height: 80px;
+    box-shadow: 0 2px 5px var(--box-shadow);
+    background-color: var(--white);
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    .header-inner-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        .header-inner-body {
+            min-height: 80px;
+             ::ng-deep .ant-menu {
+                font-size: 18px;
+                color: var(--font-color);
+            }
+             ::ng-deep .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-selected,
+             ::ng-deep .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item:hover {
+                color: var(--primary-color);
+                border-bottom: 3px solid var(--primary-color);
+                font-family: 'GoogleSans-Medium';
+                outline: 0;
+            }
+             ::ng-deep .ant-menu-horizontal {
+                border-bottom: 0;
+                line-height: 78px;
+            }
+             ::ng-deep .ant-drawer-header {
+                display: none;
+            }
+             ::ng-deep .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item {
+                margin: 0 30px;
+                @include respond-between(xxs, xs) {
+                    margin: 0 27px;
+                }
+            }
+        }
+    }
+}
+
+.auth-section {
+    min-height: 100vh;
+    height: 100%;
+    padding-top: 80px;
+    overflow-y: auto;
+    display: flex;
+    user-select: none;
+    font-family: 'GoogleSans-Regular';
+    background-color: var(--bg-color);
+    .auth-form {
+        min-width: 450px;
+        max-width: 450px;
+        width: 100%;
+        margin: auto;
+        background: white;
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 25px 0px var(--box-shadow);
+        @include respond-between(xxs, xs) {
+            min-width: inherit;
+            max-width: inherit;
+            padding: 20px;
+        }
+        .auth-title {
+            font-family: 'GoogleSans-Medium';
+            font-size: 30px;
+        }
+    }
+    .login-form-forgot {
+        color: var(--primary-color);
+    }
+    input {
+        height: 42px;
+        border-radius: 4px;
+        width: 100%;
+        border: 1px solid var(--text-color);
+        outline: 0;
+        padding: 2px 15px;
+    }
+    .btn {
+        border-radius: 4px;
+    }
+    a:hover {
+        color: var(--primary-color);
+    }
+     ::ng-deep .ant-form-item-label>label,
+     ::ng-deep .ant-checkbox-wrapper {
+        color: var(--heading-color);
+    }
+     ::ng-deep .ant-form-item {
+        display: block;
+    }
+     ::ng-deep .ant-checkbox-checked::after {
+        border: 1px solid var(--button);
+    }
+     ::ng-deep .ant-checkbox-checked .ant-checkbox-inner {
+        background: var(--button);
+        border: 1px solid var(--button);
+    }
+     ::ng-deep .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+     ::ng-deep .ant-checkbox:hover .ant-checkbox-inner {
+        border-color: var(--button);
+    }
+     ::ng-deep .ant-form-item-label>label::after {
+        content: '';
+    }
+     ::ng-deep .ant-input-group>.ant-input:last-child {
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+    }
+     ::ng-deep .ant-input-group-addon {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        border-color: var(--text-color);
+    }
+     ::ng-deep .ant-select-single .ant-select-selector .ant-select-selection-item {
+        font-family: 'GoogleSans-Medium';
+    }
+     ::ng-deep .ant-input-focused,
+     ::ng-deep .ant-input:focus {
+        border-color: var(--primary-color);
+        box-shadow: none;
+    }
+     ::ng-deep .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+        border-color: transparent;
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
+// responsive
+// @media (min-width: 320px) and (max-width: 449px) {
+//     .ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item {
+//         margin: 0 29px !important;
+//     }
+//     .auth-section .auth-form {
+//         min-width: inherit;
+//         max-width: inherit;
+//         padding: 20px;
+//     }
+// }

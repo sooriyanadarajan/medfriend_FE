@@ -1,0 +1,16 @@
+@mixin flex-shared {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin center-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin dis-block {
+    display: inline-block;
+    width: 100%;
+}

@@ -1,0 +1,43 @@
+<div class="main-body pl-10">
+    <div class="upload-section">
+        <h1 class="mb-3">Upload Document for verification</h1>
+        <div nz-row>
+            <div nz-col nzSm="24" nzLg="12">
+                <div class="upload-proof mb-2">
+                    <h4 class="mb-1">Medical Registration Proof</h4>
+                    <nz-upload nzType="drag" [nzPreviewIsImage] [nzMultiple]="false" nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76">
+                        <i nz-icon nzType="upload"></i> Drag and Upload files here
+                    </nz-upload>
+                    <div class="dflex-between">
+                        <p>Files supported: png, jpg, PDF</p>
+                        <p>Maximum size: 2MB</p>
+                    </div>
+                </div>
+                <div class="upload-proof mb-2">
+                    <h4 class="mb-1">Degree Proof</h4>
+                    <nz-upload nzType="drag" [nzMultiple]="true" nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76">
+                        <i nz-icon nzType="upload"></i> Drag and Upload files here
+                    </nz-upload>
+                    <div class="dflex-between">
+                        <p>Files supported: png, jpg, PDF</p>
+                        <p>Maximum size: 2MB</p>
+                    </div>
+                </div>
+                <div class="upload-proof mb-2">
+                    <h4 class="mb-1">Government: Issued Photo ID Proof</h4>
+                    <div class="display-flex upload-two-card">
+                        <nz-upload nzType="drag" [nzMultiple]="true" nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76">
+                            <i nz-icon nzType="upload"></i> Upload Front
+                        </nz-upload>
+                        <nz-upload nzType="drag" [nzMultiple]="true" nzAction="https://www.mocky.io/v2/5cc8019d300000980a055e76">
+                            <i nz-icon nzType="upload"></i> Upload Back
+                        </nz-upload>
+                    </div>
+                </div>
+                <div class="mt-2 mb-2 dis-block">
+                    <button nz-button class="btn mr-2">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

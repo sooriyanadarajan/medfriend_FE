@@ -1,0 +1,22 @@
+<div class="main-layout">
+    <div class="main-inner-layout pl-5 pr-5">
+        <div class="appointment-section mt-3">
+            <div class="card card-padding">
+                <h1 class="mb-3">Appointments</h1>
+                <div class="appointment-tab">
+                    <nz-tabset [nzAnimated]="false">
+                        <nz-tab nzTitle="Pending Appointments">
+                            <app-pending-app></app-pending-app>
+                        </nz-tab>
+                        <nz-tab nzTitle="Upcoming Appointments">
+                            <app-upcoming-app></app-upcoming-app>
+                        </nz-tab>
+                        <nz-tab nzTitle="Completed Appointment">
+                            <app-completed-app></app-completed-app>
+                        </nz-tab>
+                    </nz-tabset>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

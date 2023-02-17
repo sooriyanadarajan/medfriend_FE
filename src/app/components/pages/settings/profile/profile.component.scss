@@ -1,0 +1,73 @@
+.profile-section {
+    input,
+     ::ng-deep .ant-select {
+        height: 42px;
+        border-radius: 4px;
+        width: 100%;
+        border: 1px solid var(--text-color);
+        outline: 0;
+        padding: 0 15px;
+    }
+    .btn {
+        border-radius: 4px;
+        width: 150px;
+    }
+     ::ng-deep .ant-form-item-label>label::after {
+        content: '';
+    }
+     ::ng-deep .ant-select-single .ant-select-selector .ant-select-selection-item {
+        font-family: 'GoogleSans-Medium';
+    }
+     ::ng-deep .ant-input-focused,
+     ::ng-deep .ant-input:focus {
+        border-color: var(--primary-color);
+        box-shadow: none;
+    }
+     ::ng-deep .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+        border-color: transparent;
+        background-color: transparent;
+        box-shadow: none;
+    }
+     ::ng-deep .ant-select:not(.ant-select-disabled):hover .ant-select-selector,
+     ::ng-deep .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none;
+        height: 42px;
+        padding: 0;
+        align-items: center;
+    }
+     ::ng-deep .ant-select-single:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-search-input {
+        height: 42px;
+    }
+    [nz-radio] {
+        font-size: 16px;
+        padding: 10px;
+    }
+     ::ng-deep .ant-radio-group {
+        width: 100%;
+    }
+     ::ng-deep .ant-radio-checked::after {
+        border: 1px solid var(--primary-color);
+    }
+     ::ng-deep .ant-radio:hover .ant-radio-inner,
+     ::ng-deep .ant-radio-checked .ant-radio-inner,
+     ::ng-deep .ant-radio-input:focus+.ant-radio-inner,
+     ::ng-deep .ant-radio-wrapper:hover .ant-radio,
+     ::ng-deep .ant-radio:hover .ant-radio-inner {
+        border-color: var(--primary-color);
+    }
+     ::ng-deep .ant-radio-inner::after {
+        background-color: var(--primary-color);
+    }
+    textarea {
+        border: 1px solid var(--text-color);
+        outline: 0;
+        padding: 15px 15px;
+        border-radius: 4px;
+    }
+     ::ng-deep .ant-form-item .ant-upload.ant-upload-drag {
+        background: transparent;
+        height: 150px;
+    }
+}

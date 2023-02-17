@@ -1,0 +1,37 @@
+<div class="pending-app-section">
+    <div class="pending-app-table">
+        <div class="card-padding">
+            <nz-table #borderedTable [nzData]="dataSet">
+                <thead>
+                    <tr>
+                        <th>Sl.no</th>
+                        <th>Patient Name/Booking ID</th>
+                        <th>Date/Time</th>
+                        <th>Contact</th>
+                        <th>Disease</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of borderedTable.data">
+                        <td>{{ data.slno }}</td>
+                        <td>
+                            <span> {{ data.name }}</span><span class="fs-bold"> {{ data.bookingid }}</span>
+                        </td>
+                        <td>
+                            <span> {{ data.date }}</span><span class="fs-bold"> {{ data.timing }}</span>
+                        </td>
+                        <td>{{ data.contact }}</td>
+                        <td>{{ data.disease }}</td>
+                        <td>
+                            <div class="display-flex">
+                                <button nz-button class="primary-btn w-13 mr-2 green">{{ data.approve }}</button>
+                                <button nz-button class="secondary-btn w-13 red">{{ data.cancel }}</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </nz-table>
+        </div>
+    </div>
+</div>

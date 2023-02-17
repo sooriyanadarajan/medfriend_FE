@@ -1,0 +1,277 @@
+<div class="main-layout bg-white">
+    <div class="main-inner-layout">
+        <div class="home-section pl-2 pr-2">
+            <div nz-row>
+                <div nz-col nzSm="24" nzLg="6" class=" p-3">
+                    <div class="home-available-details">
+                        <div class="calendar mb-3">
+                            <h1 class="mb-3">Availability</h1>
+                            <div>
+                                <div class="calendar-input display-flex justify-flex-end">
+                                    <div class="display-flex mb-2">
+                                        <div class="icon-bg mr-2 cursor">
+                                            <i nz-icon nzType="arrow-left" nzTheme="outline"></i>
+                                        </div>
+                                        <div class="icon-bg ml-2 cursor">
+                                            <i nz-icon nzType="arrow-right" nzTheme="outline"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <nz-calendar [nzFullscreen]="false" (nzSelectChange)="onValueChange($event)" (nzPanelChange)="onPanelChange($event)"></nz-calendar>
+                                <div class="display-flex align-center mt-2">
+                                    <div class="display-flex align-center mr-2">
+                                        <div class="bullet-icon secondary-bg"></div>
+                                        <p class="text-color bold">Approved Appointments</p>
+                                    </div>
+                                    <div class="display-flex align-center ml-2">
+                                        <div class="bullet-icon primary-bg"></div>
+                                        <p class="text-color bold">Today's date</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basic-details">
+                            <h1 class="mb-3">Basic Details</h1>
+                            <div nz-row>
+                                <div nz-col nzSm="24" nzLg="12" class="pr-1">
+                                    <div class="card border p-15">
+                                        <h4 class="text-color fs-16">Total Appointments</h4>
+                                        <h1 class="primary-color">215</h1>
+                                    </div>
+                                </div>
+                                <div nz-col nzSm="24" nzLg="12" class="pl-1">
+                                    <div class="card border p-15">
+                                        <h4 class="text-color fs-16">Total Earnings</h4>
+                                        <h1 class="primary-color">$180.00</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div nz-row class="mt-2">
+                                <div nz-col nzSm="24" nzLg="12" class="pr-1">
+                                    <div class="card border p-15">
+                                        <h4 class="text-color fs-16">LAst 30 days App.</h4>
+                                        <h1 class="primary-color">21</h1>
+                                    </div>
+                                </div>
+                                <div nz-col nzSm="24" nzLg="12" class="pl-1">
+                                    <div class="card border p-15">
+                                        <h4 class="text-color fs-16">Upcoming App.</h4>
+                                        <h1 class="primary-color">8</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div nz-col nzSm="24" nzLg="12" class="bg-color p-3">
+                    <div class="home-pending-details">
+                        <div class="dflex-between">
+                            <h1>Pending Appointments <span>(21)</span></h1>
+                            <p class="cursor light-bold" routerLink='/appointment'>View All</p>
+                        </div>
+                        <!-- empty card -->
+                        <div class="card empty-card card-padding mb-3 mt-3 display-none">
+                            <nz-empty [nzNotFoundContent]="null"></nz-empty>
+                            <p class="text-color bold text-center">There is no new appointment</p>
+                        </div>
+                        <!-- empty card -->
+                        <div class="card primary-bg card-padding mb-3 mt-3">
+                            <div class="appointment-details dflex-between">
+                                <div class="patient-details display-flex align-center">
+                                    <img src="../../../../assets/img/profile.jpg">
+                                    <div class="name-details pl-1">
+                                        <h4>Alexa Keev</h4>
+                                        <p>Booking ID: ID21452</p>
+                                    </div>
+                                </div>
+                                <div class="action display-flex">
+                                    <button nz-button class=" primary-btn">Approve</button>
+                                    <button nz-button class="secondary-btn ml-2">Cancel</button>
+                                </div>
+                            </div>
+                            <div class="display-flex align-center mt-3 mb-2">
+                                <div class="display-flex align-center">
+                                    <div class="icon-bg ">
+                                        <i nz-icon nzType="clock-circle" nzTheme="outline"></i>
+                                    </div>
+                                    <h5 class="ml-1">Wed, Aug 03,2021</h5>
+                                </div>
+                                <h5 class="ml-4">12:30 pm - 1:00 pm</h5>
+                            </div>
+                            <div class="display-flex">
+                                <div class="icon-bg ">
+                                    <i nz-icon nzType="edit" nzTheme="outline"></i>
+                                </div>
+                                <p class="ml-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam pariatur minus alias quos amet, nesciunt eaque consectetur architecto.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="home-review-details">
+                        <div class="dflex-between">
+                            <h1>Reviews <span>(210)</span></h1>
+                            <p class="cursor light-bold" routerLink='/review'>View All</p>
+                        </div>
+                        <!-- empty card -->
+                        <div class="card empty-card card-padding mb-3 mt-3 display-none">
+                            <nz-empty [nzNotFoundContent]="null"></nz-empty>
+                            <p class="text-color bold text-center">No review yet</p>
+                        </div>
+                        <!-- empty card -->
+                        <div nz-row>
+                            <div nz-col nzSm="24" nzLg="12" class="pr-2">
+                                <div class="card max-height mb-3 mt-3">
+                                    <div class="patient-details display-flex align-center mb-2">
+                                        <img src="../../../../assets/img/profile.jpg">
+                                        <h4 class="ml-1 text-bold">Alexa Keev</h4>
+                                    </div>
+                                    <div class="patient-review">
+                                        <h3 class="mb-1">Wonderful experience</h3>
+                                        <p>Her treatment and advice gave relief within 2 days. I was suffering from skin inflammation and severe itiching in my legs. She only gave some ointments, moisturizer and it helped without internal medication. She
+                                            is very good.</p>
+                                        <div class="display-flex align-center mt-2">
+                                            <div class="icon-bg">
+                                                <i nz-icon nzType="calendar" nzTheme="outline"></i>
+                                            </div>
+                                            <p class="ml-1 fs-14">Wed, Aug 03,2021</p>
+                                        </div>
+                                        <div class="rating mt-2 mb-2">
+                                            <nz-rate [(ngModel)]="value" [nzTooltips]="tooltips"></nz-rate>
+                                            <span *ngIf="value" class="ant-rate-text text-color">{{ value ? tooltips[value - 1] : '' }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div nz-col nzSm="24" nzLg="12" class="pl-2">
+                                <div class="card max-height mb-3 mt-3">
+                                    <div class="patient-details display-flex align-center mb-2">
+                                        <img src="../../../../assets/img/profile.jpg">
+                                        <h4 class="ml-1 text-bold">Alexa Keev</h4>
+                                    </div>
+                                    <div class="patient-review">
+                                        <h3 class="mb-1">Wonderful experience</h3>
+                                        <p>Her treatment and advice gave relief within 2 days. I was suffering from skin inflammation and severe itiching in my legs. She only gave some ointments, moisturizer and it helped without internal medication. She
+                                            is very good.</p>
+                                        <div class="display-flex align-center mt-2">
+                                            <div class="icon-bg">
+                                                <i nz-icon nzType="calendar" nzTheme="outline"></i>
+                                            </div>
+                                            <p class="ml-1 fs-14">Wed, Aug 03,2021</p>
+                                        </div>
+                                        <div class="rating mt-2 mb-2">
+                                            <nz-rate [(ngModel)]="value" [nzTooltips]="tooltips"></nz-rate>
+                                            <span *ngIf="value" class="ant-rate-text text-color">{{ value ? tooltips[value - 1] : '' }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div nz-col nzSm="24" nzLg="6" class="p-3">
+                    <div class="upcoming-details">
+                        <div class="dflex-between">
+                            <h1>Upcomings</h1>
+                            <p class="cursor light-bold" routerLink='/appointment'>View All</p>
+                        </div>
+                        <!-- empty card -->
+                        <div class="card center-align empty-card h-100 card-padding mb-3 mt-3 display-none">
+                            <div>
+                                <nz-empty [nzNotFoundContent]="null"></nz-empty>
+                                <p class="text-color bold text-center">No appointment yet</p>
+                            </div>
+                        </div>
+                        <!-- empty card -->
+                        <div class="card border card-padding mb-3 mt-3">
+                            <div class="appointment-details dflex-between">
+                                <div class="patient-details display-flex align-center">
+                                    <img src="../../../../assets/img/profile.jpg">
+                                    <div class="name-details pl-1">
+                                        <h4 class="text-bold">Alexa Keev</h4>
+                                        <p class="text-color bold">Booking ID: ID21452</p>
+                                    </div>
+                                </div>
+                                <div class="action display-flex">
+                                    <button nz-button class="secondary-btn ml-2">Cancel</button>
+                                </div>
+                            </div>
+                            <div class="display-flex align-center mt-3 mb-2">
+                                <div class="display-flex align-center">
+                                    <div class="icon-bg ">
+                                        <i nz-icon nzType="clock-circle" nzTheme="outline"></i>
+                                    </div>
+                                    <h5 class="ml-1 text-color bold fs-14">Wed, Aug 03,2021 </h5>
+                                </div>
+                                <h5 class="ml-1 text-color bold fs-14"> 12:30 pm - 1:00 pm</h5>
+                            </div>
+                            <div class="display-flex">
+                                <div class="icon-bg ">
+                                    <i nz-icon nzType="edit" nzTheme="outline"></i>
+                                </div>
+                                <p class="ml-1 para-color fs-14">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="card border card-padding mb-3 mt-3">
+                            <div class="appointment-details dflex-between">
+                                <div class="patient-details display-flex align-center">
+                                    <img src="../../../../assets/img/profile.jpg">
+                                    <div class="name-details pl-1">
+                                        <h4 class="text-bold">Alexa Keev</h4>
+                                        <p class="text-color bold">Booking ID: ID21452</p>
+                                    </div>
+                                </div>
+                                <div class="action display-flex">
+                                    <button nz-button class="secondary-btn ml-2">Cancel</button>
+                                </div>
+                            </div>
+                            <div class="display-flex align-center mt-3 mb-2">
+                                <div class="display-flex align-center">
+                                    <div class="icon-bg ">
+                                        <i nz-icon nzType="clock-circle" nzTheme="outline"></i>
+                                    </div>
+                                    <h5 class="ml-1 text-color bold fs-14">Wed, Aug 03,2021 </h5>
+                                </div>
+                                <h5 class="ml-1 text-color bold fs-14"> 12:30 pm - 1:00 pm</h5>
+                            </div>
+                            <div class="display-flex">
+                                <div class="icon-bg ">
+                                    <i nz-icon nzType="edit" nzTheme="outline"></i>
+                                </div>
+                                <p class="ml-1 para-color fs-14">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="card border card-padding mb-3 mt-3">
+                            <div class="appointment-details dflex-between">
+                                <div class="patient-details display-flex align-center">
+                                    <img src="../../../../assets/img/profile.jpg">
+                                    <div class="name-details pl-1">
+                                        <h4 class="text-bold">Alexa Keev</h4>
+                                        <p class="text-color bold">Booking ID: ID21452</p>
+                                    </div>
+                                </div>
+                                <div class="action display-flex">
+                                    <button nz-button class="secondary-btn ml-2">Cancel</button>
+                                </div>
+                            </div>
+                            <div class="display-flex align-center mt-3 mb-2">
+                                <div class="display-flex align-center">
+                                    <div class="icon-bg ">
+                                        <i nz-icon nzType="clock-circle" nzTheme="outline"></i>
+                                    </div>
+                                    <h5 class="ml-1 text-color bold fs-14">Wed, Aug 03,2021 </h5>
+                                </div>
+                                <h5 class="ml-1 text-color bold fs-14"> 12:30 pm - 1:00 pm</h5>
+                            </div>
+                            <div class="display-flex">
+                                <div class="icon-bg ">
+                                    <i nz-icon nzType="edit" nzTheme="outline"></i>
+                                </div>
+                                <p class="ml-1 para-color fs-14">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

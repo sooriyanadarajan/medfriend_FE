@@ -1,0 +1,16 @@
+.security-section {
+    input {
+        height: 42px;
+        border-radius: 4px;
+        width: 100%;
+        border: 1px solid var(--text-color);
+        outline: 0;
+        padding: 2px 15px;
+    }
+    .btn {
+        border-radius: 4px;
+    }
+     ::ng-deep .ant-form-item-label>label::after {
+        content: '';
+    }
+}

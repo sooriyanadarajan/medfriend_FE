@@ -1,0 +1,51 @@
+<div class="header-section">
+    <div class="header-inner-menu container">
+        <div class="header-inner-body">
+            <a href="home" class="logo">LOGO</a>
+            <ul nz-menu nzMode="horizontal">
+                <li nz-menu-item routerLink='/home' routerLinkActive="active">
+                    Home
+                </li>
+
+                <li nz-menu-item routerLink='/appointment' routerLinkActive="active">
+                    Appointment
+                </li>
+                <li nz-menu-item routerLink='/calendar' routerLinkActive="active">
+                    Calendar
+                </li>
+                <li nz-menu-item routerLink='/wallet' routerLinkActive="active">
+                    Wallet
+                </li>
+                <li nz-menu-item routerLink='/settings' routerLinkActive="active">
+                    Setting
+                </li>
+            </ul>
+            <!-- <div (click)="open()" class="display-none">
+                <i nz-icon nzType="menu-fold" nzTheme="outline"></i>
+            </div>
+            <nz-drawer class="display-none" [nzClosable]="false" [nzVisible]="visible" nzPlacement="right" nzTitle="Basic Drawer" (nzOnClose)="close()">
+                <ng-container *nzDrawerContent>
+                    <ul>
+                        <li>Home</li>
+                        <li>Doctor</li>
+                        <li>Appointment</li>
+                        <li>Pharmancy</li>
+                        <li>Insurance</li>
+                    </ul>
+                </ng-container>
+            </nz-drawer> -->
+            <div class="left-header pr-0">
+                <ul class="display-flex list-style align-center mb-0">
+                    <li><i nz-icon nzType="bell" nzTheme="outline"></i></li>
+                    <li class="profile pr-0" nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu"> <img src="../../../assets/img/profile.jpg"></li>
+                </ul>
+                <nz-dropdown-menu #menu="nzDropdownMenu">
+                    <ul nz-menu>
+                        <li nz-menu-item routerLink='/settings'><i nz-icon nzType="user" nzTheme="outline"></i>Profile</li>
+                        <li nz-menu-item routerLink='/auth/login'><i nz-icon nzType="logout" nzTheme="outline"></i>Logout</li>
+                    </ul>
+                </nz-dropdown-menu>
+            </div>
+        </div>
+    </div>
+</div>

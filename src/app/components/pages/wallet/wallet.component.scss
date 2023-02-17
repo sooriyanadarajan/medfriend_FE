@@ -1,0 +1,174 @@
+@import "../../../../assets/scss/table.scss";
+.wallet-section {
+    .w-auto {
+        width: auto !important;
+        padding: 0 30px;
+    }
+    .left-icon {
+        width: 50px;
+        text-align: center;
+        img {
+            width: 30px;
+        }
+    }
+    .right-text {
+        p {
+            color: var(--text-color);
+            font-size: 18px;
+        }
+        h5 {
+            font-size: 20px;
+            color: var(--font-color);
+            font-family: 'GoogleSans-Bold';
+            margin-bottom: 0;
+        }
+    }
+    .box-shadow {
+        box-shadow: 0 0px 16px var(--box-shadow);
+    }
+    .wallet-card {
+        background: url(../../../../assets/img/icons/card.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        max-width: 400px;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding: 35px;
+        h4 {
+            color: var(--white);
+            font-size: 18px;
+        }
+        h1 {
+            color: var(--white);
+            font-size: 35px;
+            font-family: 'GoogleSans-Bold';
+        }
+    }
+    .progress-img {
+        position: absolute;
+        width: 20px;
+        left: calc(35% - 55px);
+        top: 38%;
+    }
+     ::ng-deep .ant-progress-circle .ant-progress-inner {
+        width: 65px !important;
+        height: 65px !important;
+        font-size: 16px !important;
+    }
+    .wallet-progress-1 {
+         ::ng-deep .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path {
+            stroke: var(--primary-color);
+        }
+    }
+    .wallet-progress-2 {
+         ::ng-deep .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path {
+            stroke: var(--secondary-color);
+        }
+        .progress-img {
+            left: calc(35% - 36px);
+        }
+    }
+     ::ng-deep .ant-progress-circle-trail,
+     ::ng-deep .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path {
+        stroke-width: 9px;
+    }
+    .my-bank {
+        p {
+            font-family: 'GoogleSans-Bold';
+            color: var(--font-color);
+        }
+        .bank-menu {
+            padding: 0 10px;
+            cursor: pointer;
+            img {
+                width: 5px;
+                cursor: pointer;
+            }
+        }
+        .bank-img {
+            background: var(--icon-bg);
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            padding: 10px;
+            text-align: center;
+            img {
+                width: 100%;
+            }
+             ::ng-deep .anticon {
+                font-size: 25px;
+                color: var(--primary-color);
+            }
+        }
+        .delete-icon {
+            cursor: pointer;
+            img {
+                width: 18px;
+            }
+             ::ng-deep .anticon {
+                color: var(--primary-color);
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+::ng-deep .ant-modal-title {
+    font-size: 30px;
+    font-family: 'GoogleSans-Medium';
+    color: var(--heading-color);
+}
+
+input,
+ ::ng-deep .ant-select {
+    height: 42px;
+    border-radius: 4px;
+    width: 100%;
+    border: 1px solid var(--text-color);
+    outline: 0;
+    padding: 0 15px;
+}
+
+::ng-deep .ant-input-focused,
+ ::ng-deep .ant-input:focus,
+ ::ng-deep .ant-input:hover {
+    border-color: var(--primary-color);
+    box-shadow: none;
+}
+
+::ng-deep .ant-modal-footer {
+    display: none;
+}
+
+.w-auto {
+    width: auto;
+    padding: 0 30px;
+    border-radius: 4px;
+}
+
+::ng-deep .ant-modal-header {
+    border-bottom: 0;
+    padding: 40px 40px;
+    border-radius: 4px 4px 0 0;
+}
+
+::ng-deep .ant-modal-content {
+    border-radius: 4px;
+}
+
+::ng-deep .ant-modal-body {
+    padding: 0 40px 40px;
+}
+
+::ng-deep .ant-modal-close-x {
+    line-height: 100px;
+    width: 80px;
+}
+
+::ng-deep .ant-form-item-label>label::after {
+    content: '';
+}
+
+// ::ng-deep .ant-progress-text {
+//     background-image: url('../../../../assets//img//icons/income.svg') !important;
+// }

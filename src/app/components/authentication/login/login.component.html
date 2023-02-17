@@ -1,0 +1,51 @@
+<div class="header-section">
+    <div class="header-inner-menu container">
+        <div class="header-inner-body">
+            <ul nz-menu nzMode="horizontal">
+                <li nz-menu-item nzSelected routerLink='/auth/login' routerLinkActive="active">
+                    Login
+                </li>
+                <li routerLink="/auth/signup" routerLinkActive="active" nz-menu-item>
+                    Signup
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="auth-section">
+    <div class="auth-form">
+        <div class="auth-title center mb-3">Log In</div>
+        <form [formGroup]="signinForm" (ngSubmit)="onSubmit(signinForm)">
+          
+            
+
+            <nz-form-item class="display-block">
+                <nz-form-label nzFor="email">Email Id</nz-form-label>
+                <nz-form-control>
+                    <nz-form-control  nzErrorTip="The input is not valid E-mail!">
+                    <input nz-input formControlName="email" placeholder="email is Required"   placeholder="Enter Your Email"  type="email">
+                    </nz-form-control>
+                </nz-form-control>
+
+            </nz-form-item>
+            <nz-form-item class="display-block">
+                <nz-form-label nzFor="password">Password</nz-form-label>
+                <nz-form-control>
+                    <nz-form-control  nzErrorTip="Please input your password!">
+                    <input nz-input formControlName="password" placeholder="password is Required" type="password" />
+                </nz-form-control>
+            </nz-form-control>
+            </nz-form-item>
+            <div nz-row class="login-form-margin">
+                <div nz-col [nzSpan]="12">
+                    <label nz-checkbox ngModel="checked" [ngModelOptions]="{standalone: true}">Remember me</label>
+                </div>
+                <div nz-col [nzSpan]="12" class="justify-flex-end display-flex">
+                    <a routerLink="/auth/forgot-password" class="login-form-forgot">Forgot password?</a>
+                </div>
+            </div>
+            <button class="btn mt-2" nz-button [disabled]="signinForm.invalid">Log In</button>
+        </form>
+    </div>
+</div>

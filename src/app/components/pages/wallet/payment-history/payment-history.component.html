@@ -1,0 +1,39 @@
+<div class="main-layout">
+    <div class="main-inner-layout pl-5 pr-5">
+        <div class="pending-app-section">
+            <div class="pending-app-table mt-3">
+                <div class="card card-padding">
+                    <div class="pending-header mb-3">
+                        <h1 class="mb-3">Payment History</h1>
+                    </div>
+                    <nz-table #borderedTable [nzData]="dataSet">
+                        <thead>
+                            <tr>
+                                <th>Bill No</th>
+                                <th>Patient Name</th>
+                                <th>Date</th>
+                                <th>Timing</th>
+                                <th>Disease</th>
+                                <th>Charges</th>
+                                <th>Tax</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let data of borderedTable.data">
+                                <td>{{ data.blno }}</td>
+                                <td>{{ data.name }}</td>
+                                <td>{{ data.date }}</td>
+                                <td>{{ data.timing }}</td>
+                                <td>{{ data.disease }}</td>
+                                <td>{{ data.charges }}</td>
+                                <td>{{ data.tax }}</td>
+                                <td>{{ data.total }}</td>
+                            </tr>
+                        </tbody>
+                    </nz-table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
